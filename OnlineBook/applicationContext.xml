@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="dbConnectionManager" class="DBConnectionManager">
+        <property name="url" value="jdbc:mysql://localhost:3306/BookstoreDB"/>
+        <property name="username" value="root"/>
+        <property name="password" value="your_password"/>
+    </bean>
+    <aop:aspectj-autoproxy/>
+
+    <bean id="loggingAspect" class="LoggingAspect"/>
+</beans>
+    
+</beans>
